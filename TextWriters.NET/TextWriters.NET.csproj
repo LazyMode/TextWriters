@@ -38,6 +38,8 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PrefixedWrapperLineWriter.cs" />
+    <Compile Include="WrapperLineWriter.cs" />
     <Compile Include="EventLineWriter.cs" />
     <Compile Include="ActionLineWriter.cs" />
     <Compile Include="LineWriter.cs" />
