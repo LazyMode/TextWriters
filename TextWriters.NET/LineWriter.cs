@@ -2,6 +2,7 @@
 using System.IO;
 using System.Text;
 
+// borrowed the idea from http://damieng.com/blog/2008/07/30/linq-to-sql-log-to-debug-window-file-memory-or-multiple-writers
 public abstract class LineWriter : TextWriter
 {
     private bool _CRFound = false;
