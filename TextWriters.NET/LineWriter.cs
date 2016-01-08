@@ -66,5 +66,5 @@ public abstract class LineWriter : TextWriter
         base.Dispose(disposing);
     }
 
-    public override Encoding Encoding => Encoding.Unicode;
+    public override Encoding Encoding => Defaults.UnicodeEncoding;
 }
