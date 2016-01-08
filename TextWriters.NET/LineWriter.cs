@@ -8,6 +8,9 @@ public abstract class LineWriter : TextWriter
     private readonly StringBuilder _Buffer = new StringBuilder();
     private bool _CRFound = false;
 
+    public bool IsDisposing { get; private set; } = false;
+    public bool IsDisposed { get; private set; } = false;
+
     protected LineWriter(IFormatProvider formatProvider)
         : base(formatProvider)
     { }
@@ -42,6 +45,25 @@ public abstract class LineWriter : TextWriter
         }
 
         FlushLine();
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        if (!IsDisposing)
+        {
+            IsDisposing = true;
+            try
+            {
+                if (_Buffer.Length > 0)
+                    FlushLine();
+            }
+            finally
+            {
+                IsDisposed = true;
+            }
+        }
+
+        base.Dispose(disposing);
     }
 
     public override Encoding Encoding => Encoding.Unicode;
