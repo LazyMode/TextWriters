@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>TextWriters</id>
+        <version>0.8.0</version>
+        <authors>Licshee</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>The missing TextWriters you always write by yourself again and again.</description>
+    </metadata>
+    <files>
+        <file src="TextWriters.dll" target="lib\TextWriters.dll" />
+    </files>
+</package>
