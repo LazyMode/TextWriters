@@ -41,11 +41,11 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Defaults.cs" />
     <Compile Include="PrefixedWrapperLineWriter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WrapperLineWriter.cs" />
     <Compile Include="EventLineWriter.cs" />
     <Compile Include="ActionLineWriter.cs" />
